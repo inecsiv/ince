@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+
+
+    <!-- Navigation Bar -->
+<nav>
+    <div class="container">
+      <h1>i-NexT Computer Education</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="dropdown">
+          <a href="">Student's Pannel <strong>&#129171;</strong></a>
+          <ul class="dropdown-content">
+            <li><a href="studentdata.html">Student Data Records</a></li>
+            <li><a href="studentmarksheet.html">Student Marksheets</a></li>
+          </ul>
+        </li>
+        <li><a href="course.html">Courses</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+    <!-- Hero Section -->
+<header class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <section id="admin-login" class="admin-login">
+            <div class="container">
+              <h2>Admin Login</h2>
+              <form id="admin-login-form">
+                <div class="form-group">
+                  <label for="admin-id"><h4>Admin ID:</h4></label>
+                  <input type="text" id="admin-id" name="admin-id" required>
+                </div>
+                <div class="form-group">
+                  <label for="admin-password"><h4>Password:</h4></label>
+                  <input type="password" id="admin-password" name="admin-password" required>
+                </div>
+                <button type="submit">Login</button>
+                <p id="login-error" class="error-message"></p>
+              </form>
+            </div>
+          </section>
+        <div class="hero-image">
+          <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYRkwEds6OcQ0XmNDUBq4FH60XSKaJQXzamMkvkJqdqqtYunjYIqX7oCiZRacCoY0CVPeps_8DYOry5rk1Kq_GaSDGlA=s1600" alt="Hero Image">
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+<script src="admin-login.js"></script> <!-- Link to your JavaScript file -->
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="container">
+      <h5>&copy; 2024 i-NexT Computer Education. All rights reserved.</h5>
+    </div>
+  </footer>
+
+</body>
+</html>

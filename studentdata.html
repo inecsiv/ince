@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Student's Panel</title>
+  <link rel="stylesheet" href="styles.css">
+<title>STUDENT'S RECORDS</title>
+<style>
+/* CSS for Student's Panel Table */
+.customTable {
+  width: 90%; /* Adjust the width as needed */
+  border-collapse: collapse;
+  margin: 10px auto; /* Center the table and add margin */
+}
+
+.customTable th, .customTable td {
+  padding: 6px; /* Reduce padding */
+  text-align: left;
+  border-bottom: 1px solid #ffffff;
+}
+
+.customTable th {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.customTable tbody tr:nth-child(even) {
+  background-color: #ebebeb;
+}
+
+
+
+h2, p {
+  color: #000000;
+  text-align: center;
+}
+
+#searchInput {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#searchResults {
+  margin-top: 20px;
+}
+
+/* Center align search input and buttons */
+.search-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.search-button, .print-button {
+  background-color: #1877F2; /* Green background */
+  border: none;
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px; /* Rounded corners */
+  transition-duration: 0.4s; /* Transition on hover */
+}
+
+/* Hover effect */
+.search-button:hover, .print-button:hover {
+  background-color: #61a5ff; /* Darker green */
+}
+</style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+<nav>
+    <div class="container">
+      <h1>i-NexT Computer Education</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="dropdown">
+          <a href="">Student's Pannel <strong>&#129171;</strong></a>
+          <ul class="dropdown-content">
+            <li><a href="studentmarksheet.html">Student Marksheets</a></li>
+          </ul>
+        </li>
+        <li><a href="course.html">Courses</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="admin-login.html">Admin Pannel</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+<!-- Hero Section -->
+<header class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h4>SEARCH STUDENT MARKSHEET<H4><BR><h2>i-NexT Computer Education</h2><br><h4>AN ISO 9001:2015 REGISTERED<H4>REGD. UNDER XXI of 1860 No. SIVA/256/C/85<BR><H4>REGD. UNDER MINISTRY OF YOUTH AFFAIRS NO. NYK/SIV/215545 </H4>
+            <BR><BR><BR>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search...">
+                    <button class="search-button" onclick="searchTable()">SEARCH</button>
+                    <button class="print-button" onclick="printTable()">PRINT</button>
+                  </div>  
+                  <H4>AFTER SEARCHING CHECK BELOW</H4>   
+        </div>
+        <div class="hero-image">
+          <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYSJI4g4-eZkqyQzxm57vp8MRGub1OecVrekDizRVY0vHWv1Yx-RmNQZEYlk9byRKyw6I7pjcvvkMiGh9KtDkIfJ14V0=s1600" alt="Hero Image">
+        </div>
+      </div>
+    </div>
+  </header>
+
+<div id="searchResults"></div>
+<table class="customTable" id="INCE-2024-01">
+  <thead><td><img src="" alt="PHOTO" style="width: 100px;"></td>
+   
+  </thead>
+  <tbody>
+    <tr>
+        <td colspan="2" style="text-align: center;"><strong>i-NEXT COMPUTER EDUCATION<BR>STUDENT'S PROFILE</strong></td>
+      </tr>
+      <tr>
+        <th>ID</th>
+        <th>INCE-2024-01</th>
+      </tr>
+    <tr>
+      <td>NAME:</td>
+      <td>TANMAY KARMAKAR</td>
+    </tr>
+    <tr>
+      <td>D.O.B:</td>
+      <td>08-08-2008</td>
+    </tr>
+    <tr>
+      <td>FATHER'S NAME:</td>
+      <td>P.KARMAKAR</td>
+    </tr>
+    <tr>
+      <td>GENDER:</td>
+      <td>MALE</td>
+    </tr>
+    <tr>
+      <td>PHONE NO:</td>
+      <td>8399859977</td>
+    </tr>
+    <tr>
+      <td>PERMANENT ADDRESS:</td>
+      <td>BABUPATTY</td>
+    </tr>
+    <tr>
+      <td>DISTRICT:</td>
+      <td>SIVASAGAR</td>
+    </tr>
+    <tr>
+      <td>P.O:</td>
+      <td>SIVASAGAR</td>
+    </tr>
+    <tr>
+      <td>PINCODE:</td>
+      <td>785640</td>
+    </tr>
+    <tr>
+      <td>COURSE NAME:</td>
+      <td>DCA</td>
+    </tr>
+    <tr>
+      <td>DURATION:</td>
+      <td>1 YEAR</td>
+    </tr>
+    <tr>
+      <td>SEASION:</td>
+      <td>FROM: 2023 TO:2024</td>
+    </tr>
+  </tbody>
+</table>
+
+<script>
+  function searchTable() {
+      var input, filter, tables, table, th, i, txtValue;
+      input = document.getElementById("searchInput");
+      filter = input.value.toUpperCase();
+      tables = document.getElementsByTagName("table");
+      var searchResultsDiv = document.getElementById("searchResults");
+      searchResultsDiv.innerHTML = ""; // Clear previous search results
+
+      var found = false;
+
+      for (i = 0; i < tables.length; i++) {
+          table = tables[i];
+          th = table.getElementsByTagName("th")[1]; // Get the second header cell (ID cell)
+          if (th) {
+              txtValue = th.textContent || th.innerText;
+              if (txtValue.toUpperCase() === filter) {
+                  found = true;
+                  table.style.display = "table"; // Display the found table
+              } else {
+                  table.style.display = "none"; // Hide tables that don't match
+              }
+          }
+      }
+
+      if (!found) {
+          searchResultsDiv.innerHTML = "No Record";
+      }
+  }
+
+  // Hide all tables initially
+  var tables = document.getElementsByTagName("table");
+  for (var i = 0; i < tables.length; i++) {
+      tables[i].style.display = "none";
+  }
+
+  function printTable() {
+    var printWindow = window.open("", "_blank");
+    var tableToPrint = document.getElementById("INCE-2024-01").outerHTML;
+
+    if (!tableToPrint) {
+        alert("No table to print.");
+        return;
+    }
+
+    printWindow.document.write('<html><head><title>Student Record</title>');
+    printWindow.document.write('<style>table { border-collapse: collapse; } table, th, td { border: 1px solid black; padding: 8px; }</style>');
+    printWindow.document.write('</head><body>');
+    printWindow.document.write(tableToPrint);
+    printWindow.document.write('</body></html>');
+    printWindow.document.close();
+    printWindow.print();
+}
+
+
+  window.onload = function() {
+    // Autofill the search input
+    var searchInput = document.getElementById("searchInput");
+    searchInput.value = "INCE-2024-";
+  };
+</script>
+
+<br><br><br><br><br><br><br><br><br><br><br>
+<footer class="footer">
+    <div class="container">
+      <h5>&copy; 2024 i-NexT Computer Education. All rights reserved.</h5>
+    </div>
+  </footer>
+</body>
+</html>
