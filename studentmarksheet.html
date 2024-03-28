@@ -16,18 +16,28 @@
     
     /* Adjust styles for printing */
     table {
+      margin: 10px auto; 
       text-align: center;
       width: 100%;
       border-collapse: collapse;
     }
     
 
-    .customTable th, .customTable td {
+.customTable th, .customTable td {
+  margin: 10px auto; 
   padding: 6px; /* Reduce padding */
   text-align: center;
   border-bottom: 1px solid #ffffff;
 }
 
+
+.center {
+  align-items: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 
 td {
       text-align: center;
@@ -70,7 +80,6 @@ td {
 </nav>
 
 
-
 <!-- Hero Section -->
 <header class="hero">
   <div class="container">
@@ -98,6 +107,9 @@ td {
 
 <table id="INCE/SIV/DCA/01">
   <thead>
+    <tr>
+      <td colspan="3"><img src="logo.jpg" alt="PHOTO" style="width: 100px;" class="center"></td>
+    </tr>
     <tr>
         <td colspan="3"><strong>i-NEXT COMPUTER EDUCATION<br>STUDENT MARKSHEET</strong></td>
     </tr>
@@ -204,8 +216,9 @@ function printPage() {
 
 <footer class="footer">
   <div class="container">
-    <h5>&copy; 2024 i-NexT Computer Education, Sivasagar</h5>
-    <h5>Developed by Tanmay Karmakar</h5>
+    <h7> &copy; i-NexT Computer Education, Sivasagar<br>Developed by Tanmay Karmakar</h7>
+  </div>
+</footer>
   </div>
 </footer>
 </body>
