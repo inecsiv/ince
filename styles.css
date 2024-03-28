@@ -120,6 +120,11 @@ h6 {
   color: #1877F2;
 }
 
+h7 {
+  font-size: 14px;
+  color: #ffffff;
+}
+
 p {
   color: #000000;
   margin-bottom: 20px;
@@ -366,7 +371,7 @@ th {
   }
 
   h5 {
-    font-size: 1em;
+    font-size: 15px;
     color: #ffffff;
   }
 
