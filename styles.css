@@ -6,6 +6,44 @@
   }
 
 
+  .profile-card {
+    background-color: #fff;
+    border-radius: 10px;
+    border-bottom: #007bff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .profile-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 0 auto 20px;
+  }
+
+  .profile-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .profile-title {
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 20px;
+  }
+
+  .profile-message {
+    font-size: 16px;
+    color: #000000;
+    line-height: 1.5;
+  
+
+
   /* CSS for adjusting image size */
 .image-section {
   text-align: center;
