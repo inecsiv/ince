@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Next Computer Education</title>
+    <link rel="stylesheet" href="design.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">I Next Computer Education</div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="menu" id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Students Pannel &#9662;</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="std_data.html">Student Data Records</a></li><br>
+                        <li><a href="#">Student Marksheet</a></li>
+                    </ul>
+                </li>
+                <li><a href="notice.html">Notices</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="faculty.html">Our Faculty</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="admin-login-form">
+            <div class="form-group">
+                <label for="admin-id">Admin ID:</label>
+                <input type="text" id="admin-id" name="admin-id" required>
+            </div>
+            <div class="form-group">
+                <label for="admin-password">Password:</label>
+                <input type="password" id="admin-password" name="admin-password" required>
+            </div>
+            <div id="login-error" class="error-message"></div>
+            <button type="submit" class="btn">Login</button>
+        </form>
+    </div>
+
+    <br><br><br><br>
+
+    <footer class="footer">
+        <div class="watermark">i Next Computer Education, Sivasagar<br>Developed by T.Karmakar</div>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+    <script>
+        document.getElementById("admin-login-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var adminId = document.getElementById("admin-id").value;
+    var adminPassword = document.getElementById("admin-password").value;
+    
+    if (adminId === "ssaikia" && adminPassword === "saikia7896") {
+      window.location.href = "ap.html"; 
+    } else {
+      document.getElementById("login-error").textContent = "Invalid admin ID or password.";
+    }
+});
+
+    </script>
+
+</body>
+</html>
