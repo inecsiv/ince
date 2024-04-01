@@ -3,4 +3,6 @@ function toggleMenu() {
     menu.classList.toggle('active');
 }
 
-
+$(document).bind("contextmenu",function(e) {
+ e.preventDefault();
+});
