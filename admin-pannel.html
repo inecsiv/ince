@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INCE-Notices</title>
+    <title>INCE-Admin Pannel</title>
     <link rel="stylesheet" href="design.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body>
     <header>
@@ -26,44 +25,43 @@
                         <li><a href="#">Student Marksheet</a></li>
                     </ul>
                 </li>
+                <li><a href="notice.html">Notices</a></li>
                 <li><a href="courses.html">Courses</a></li>
-                <li><a href="adminlogin.html">Admin Pannel</a></li>
                 <li><a href="site-developers.html">Site Developer</a></li>
+                <li><a href="index.html">Log Out!</a></li>
             </ul>
         </nav>
     </header>
 
 
+    <br><br><br><br><br>
     <div class="container">
-        <div class="notices">
-            <h2>Notices</h2>
-            <div class="notice">
-                <a href="1.pdf">
-                <div class="notice-info">
-                    <p>&#8605; This is a new notice. Please read it carefully.</p>
-                </div>
-            </a>
-            &nbsp; &nbsp; <span class="new-notice">New</span>
-            </div>
-            <div class="notice">
-                <a href="1.pdf">
-                <div class="notice-info">
-                    <p>&#8605; This is an old notice.</p>
-                </div>
-            </a>
-            </div>
+        <div class="box">
+            <h3>Add Student's Data (Excel)</h3>
+            <p>After adding the student's data, the dta will be live on the main site under 16 hours of processing.</p>
+            <a href="https://forms.gle/GmDAgcTj1Hide72a7" class="btn">    Add    </a>
         </div>
+        <div class="box">
+            <h3>Modify Student's Data</h3>
+            <p>After modifying the student's data, the dta will be live on the main site under 16 hours of processing.</p>
+            <a href="https://docs.google.com/spreadsheets/d/1jYEef_AZMXDMhPXTjr0pJR2eEg5b4XzN/edit?usp=sharing&ouid=114961730679177642521&rtpof=true&sd=true" class="btn">     Modify     </a>
         </div>
     </div>
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
-
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <footer class="footer">
         <div class="watermark">i Next Computer Education, Sivasagar</div>
     </footer>
 
 
     <script src="script.js"></script>
+
+    <script>
+        document.getElementById("logout-btn").addEventListener("click", function(event) {
+    event.preventDefault();
+    window.location.href = "adp.html"; 
+});
+    </script>
 
 </body>
 </html>

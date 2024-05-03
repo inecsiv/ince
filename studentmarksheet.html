@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="design.css">
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="logo.jpg">
+<title>i-NexT Computer Education-Student Marksheet</title>
+
+<style type="text/css">
+  @media print {
+    /* Hide unnecessary elements */
+    header, nav, #searchContainer, #printButtonContainer, .footer, .hero-image {
+      display: none;
+    }
+    
+    /* Adjust styles for printing */
+    table {
+      margin: 10px auto; 
+      text-align: center;
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+
+.customTable th, .customTable td {
+  margin: 10px auto; 
+  padding: 6px; /* Reduce padding */
+  text-align: center;
+  border-bottom: 1px solid #ffffff;
+}
+
+
+.center {
+  align-items: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+td {
+      text-align: center;
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    th {
+      text-align: center;
+      background-color: #f2f2f2;
+    }
+    
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+</style>
+
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+<nav>
+  <div class="container">
+    <h1>i-NexT Computer Education</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+          <li><a href="studentdata.html">Student Data Records</a></li>>
+      <li><a href="course.html">Courses</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- Hero Section -->
+<header class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h4>SEARCH STUDENT MARKSHEET<H4><BR><h2>i-NexT Computer Education</h2><br><h4>AN ISO 9001:2015 REGISTERED<H4>REGD. UNDER XXI of 1860 No. SIVA/256/C/85<BR><H4>REGD. UNDER MINISTRY OF YOUTH AFFAIRS NO. NYK/SIV/215545 </H4>
+          <BR><BR><BR>
+          <div id="searchContainer">
+            <button onclick="showTable()"><H5>SEARCH</H5></button>
+            <label for="tableId">ENTER STUDENT ID:</label>
+            <input type="text" id="tableId">
+        </div>
+        <div id="printButtonContainer">
+          <button onclick="printPage()"><H5>PRINT</H5></button>
+        </div>        
+      </div>
+      <div class="hero-image">
+        <img src="hero3.jpg" alt="Hero Image">
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+<table id="INCE/SIV/DCA/01">
+  <thead>
+    <tr>
+      <td colspan="3"><img src="logo.jpg" alt="PHOTO" style="width: 100px;" class="center"></td>
+    </tr>
+    <tr>
+        <td colspan="3"><strong>i-NEXT COMPUTER EDUCATION<br>STUDENT MARKSHEET</strong></td>
+    </tr>
+    <tr>
+      <td colspan="3"><img src="" alt="PHOTO" style="width: 100px;"></td>
+    </tr>
+    <tr>
+      <td>NAME:</td>
+      <td colspan="2">TANMAY KARMAKAR</td>
+    </tr>
+    <tr>
+      <td>STUDENT REGISTRATION NO:</td>
+      <td colspan="2">INCE-2024-01</td>
+    </tr>
+    <tr>
+      <td>FATHER'S NAME:</td>
+      <td colspan="2">T.KARMAKAR</td>
+    </tr>
+    <tr>
+      <td>COURSE NAME:</td>
+      <td colspan="2">DCA</td>
+    </tr>
+    <tr>
+      <th>SUBJECT</th>
+      <th>MARKS OBTAINED</th>
+      <th>OUT OF</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PAPER 1: THEORY</td>
+      <td class="subject-mark">45</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>PAPER 1: PRACTICAL</td>
+      <td class="subject-mark">35</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>PAPER 2: THEORY</td>
+      <td class="subject-mark">40</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>PAPER 2: PRACTICAL</td>
+      <td class="subject-mark">42</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>TOTAL MARKS</td>
+      <td id="totalMarks"></td>
+      <td>200</td>
+    </tr>
+    <tr>
+      <td>PERCENTAGE</td>
+      <td id="percentage"></td>
+      <td>100%</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+<script>
+window.onload = function() {
+    // Autofill the search input
+    var tableId = document.getElementById("tableId");
+    tableId.value = "INCE/SIV/";
+  };
+
+function showTable() {
+    var tableId = document.getElementById('tableId').value;
+    var table = document.getElementById(tableId);
+    if (table) {
+        table.style.display = 'table'; // Show the table
+        calculateTotalAndPercentage(); // Calculate and display total marks and percentage
+    } else {
+        alert('ID ' + tableId + ' NOT FOUND');
+    }
+}
+
+function calculateTotalAndPercentage() {
+    var subjectMarks = document.getElementsByClassName('subject-mark');
+    var totalMarks = 0;
+    for (var i = 0; i < subjectMarks.length; i++) {
+        totalMarks += parseFloat(subjectMarks[i].textContent);
+    }
+    var percentage = (totalMarks / 200) * 100;
+
+    document.getElementById('totalMarks').textContent = totalMarks;
+    document.getElementById('percentage').textContent = isNaN(percentage) ? '0.00%' : percentage.toFixed(2) + '%';
+}
+
+function printPage() {
+  window.print();
+}
+
+</script>
+
+<footer class="footer">
+  <div class="watermark">i Next Computer Education, Sivasagar</div>
+</footer>
+
+</body>
+</html>

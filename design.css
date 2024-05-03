@@ -39,6 +39,7 @@ header {
     padding: 0;
     margin: 0;
     display: flex;
+    z-index: 1000;
 }
 
 .menu li {
@@ -68,6 +69,7 @@ header {
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px;
+    z-index: 1000;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -83,11 +85,15 @@ header {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 70px;
-        left: 20px;
+        top: 100px;
+        width: 80%;
         background-color: #ffffff;
+        border-radius: 8px;
+        border-top: #ff4917 5px solid;
+        border-bottom: #ff4917 5px solid;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        padding: 10px;
+        padding: 12px;
+        z-index: 1000;
     }
 
     .menu.active {
@@ -458,7 +464,7 @@ input[type="password"] {
 }
 
 .notice a {
-    text-align: right;
+    text-align: left;
     color: #000000; 
     text-decoration: none; 
 }
@@ -554,4 +560,55 @@ input[type="password"] {
     text-decoration: none;
     color: #f8714c;
     margin-bottom: 0;
+}
+
+.faculty {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
+}
+
+.faculty-member {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-bottom: #ff4917 5px solid;
+    text-align: center;
+}
+
+.faculty-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; 
+}
+
+.faculty-member h2 {
+    margin-bottom: 5px;
+}
+
+.faculty-member p {
+    margin: 5px 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .faculty {
+        margin-right: 50px;
+        display: block;
+        margin-bottom: 10px;
+        justify-content: space-around;
+    }
+
+    .faculty-member {
+        margin-bottom: 18px;
+        margin-left: 50px;
+        width: 70%; 
+    }
+
+    .faculty-member h2 {
+        font-size: 1.5em;
+    }
+
+    .faculty-member p {
+        font-size: 15px;
+    }
 }

@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Data</title>
+    <title>INCE-Student Data</title>
     <link rel="stylesheet" href="design.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-     <link rel="icon" type="image/x-icon" href="logo.jpg">
 </head>
 <body>
     <header>
@@ -28,11 +27,15 @@
                 </li>
                 <li><a href="notice.html">Notices</a></li>
                 <li><a href="courses.html">Courses</a></li>
-                <li><a href="faculty.html">Our Faculty</a></li>
-                <li><a href="adp.html">Admin Pannel</a></li>
+                <li><a href="adminlogin.html">Admin Pannel</a></li>
+                <li><a href="site-developers.html">Site Developer</a></li>
             </ul>
         </nav>
     </header>
+
+
+
+
 
 
     <div class="search-print-container">
@@ -42,6 +45,19 @@
         <button onclick="showTable()" class="btn">SEARCH</button> 
         <button onclick="printPage()" class="btn">PRINT</button>
     </div>
+
+
+
+    <style>
+          @media print {
+      .header,
+      .footer, .search-print-container {
+          display: none;
+      }
+  }
+    </style>
+
+
 
 
 
@@ -18773,7 +18789,7 @@
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 <footer class="footer">
-    <div class="watermark">i Next Computer Education, Sivasagar<br>Developed by T.Karmakar</div>
+  <div class="watermark">i Next Computer Education, Sivasagar</div>
 </footer>
 
 </body>

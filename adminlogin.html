@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INCE-Notices</title>
+    <title>INCE-Login</title>
     <link rel="stylesheet" href="design.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body>
     <header>
@@ -26,37 +25,31 @@
                         <li><a href="#">Student Marksheet</a></li>
                     </ul>
                 </li>
+                <li><a href="notice.html">Notices</a></li>
                 <li><a href="courses.html">Courses</a></li>
-                <li><a href="adminlogin.html">Admin Pannel</a></li>
                 <li><a href="site-developers.html">Site Developer</a></li>
             </ul>
         </nav>
     </header>
 
 
-    <div class="container">
-        <div class="notices">
-            <h2>Notices</h2>
-            <div class="notice">
-                <a href="1.pdf">
-                <div class="notice-info">
-                    <p>&#8605; This is a new notice. Please read it carefully.</p>
-                </div>
-            </a>
-            &nbsp; &nbsp; <span class="new-notice">New</span>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="admin-login-form">
+            <div class="form-group">
+                <label for="admin-id">Admin ID:</label>
+                <input type="text" id="admin-id" name="admin-id" required>
             </div>
-            <div class="notice">
-                <a href="1.pdf">
-                <div class="notice-info">
-                    <p>&#8605; This is an old notice.</p>
-                </div>
-            </a>
+            <div class="form-group">
+                <label for="admin-password">Password:</label>
+                <input type="password" id="admin-password" name="admin-password" required>
             </div>
-        </div>
-        </div>
+            <div id="login-error" class="error-message"></div>
+            <button type="submit" class="btn">Login</button>
+        </form>
     </div>
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br>
 
     <footer class="footer">
         <div class="watermark">i Next Computer Education, Sivasagar</div>
@@ -64,6 +57,21 @@
 
 
     <script src="script.js"></script>
+
+    <script>
+        document.getElementById("admin-login-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var adminId = document.getElementById("admin-id").value;
+    var adminPassword = document.getElementById("admin-password").value;
+    
+    if (adminId === "ssaikia" && adminPassword === "saikia7896") {
+      window.location.href = "admin-pannel.html"; 
+    } else {
+      document.getElementById("login-error").textContent = "Invalid admin ID or password.";
+    }
+});
+
+    </script>
 
 </body>
 </html>
