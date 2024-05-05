@@ -19,7 +19,7 @@ header {
 
 .watermark {
     font-family: 'Poppins';
-    font-size: 15px;
+    font-size: 14px;
     font-weight: bold;
     color: #ffffff;
 }
@@ -72,6 +72,8 @@ header {
 }
 
 .hero {
+    margin-top: 0;
+    margin-bottom: 0;
     text-align: justify;
     background-color: #ffffff;
     padding: 50px 0;
@@ -157,6 +159,8 @@ p {
 }
 
 .container {
+    margin-top: 0;
+    margin-bottom: 0;
     margin: 20px;
     background-color: #ffffff;
     display: flex;
@@ -172,6 +176,7 @@ p {
 }
 
 .notice a {
+    margin: 8px;
     text-align: left;
     color: #000000; 
     text-decoration: none; 
@@ -209,12 +214,15 @@ p {
 }
 
 .profile {
+    padding: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
     flex: 1;
     padding: 20px;
 }
 
 .profile-card {
-    padding: 20px;
+    padding: 25px;
     background-color: #ffffff;
     border-bottom: #ff4917 5px solid;
     box-shadow: 0 20px 30px rgba(0,0,0,.05);
@@ -449,7 +457,7 @@ input[type="password"] {
     .content h1 {
         text-align: center;
         font-family: 'Poppins';
-        font-size: 30px;
+        font-size: 20px;
         margin-bottom: 20px;
     }
 
@@ -474,7 +482,7 @@ input[type="password"] {
     
     .content p {
         margin: 20px;
-        text-align: left;
+        text-align: justify;
         font-family: 'Poppins';
         font-size: 16px;
         margin-bottom: 20px;
@@ -539,8 +547,23 @@ input[type="password"] {
         text-decoration: none;
         color: #000000;
     }
-}
 
+    .herosec {
+        font-family: 'Poppins';
+        max-width: 1200px;
+        margin: 20px;
+        margin-top: 0;
+        margin-bottom: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .image{ 
+        display: none;
+    }
+}
 
 
 
