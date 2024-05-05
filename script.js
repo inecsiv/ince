@@ -4,6 +4,12 @@ function toggleMenu() {
 }
 
 
+// Disable right-click context menu
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+});
+
+
 /* Disable F12 key press */
 window.addEventListener('keydown', function (event) {
     if (event.keyCode === 123) { 
