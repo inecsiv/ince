@@ -28,7 +28,6 @@
                 <li><a href="notice.html">Notices</a></li>
                 <li><a href="courses.html">Courses</a></li>
                 <li><a href="adminlogin.html">Admin Pannel</a></li>
-                <li><a href="site-developers.html">Site Developer</a></li>
             </ul>
         </nav>
     </header>
@@ -49,12 +48,29 @@
 
 
     <style>
-          @media print {
-      .header,
-      .footer, .search-print-container {
+      @media print {
+        .header,
+        .footer,
+        .search-print-container {
           display: none;
+        }
+
+
+        .print-message {
+        display: block; /* Show the message when printing */
       }
-  }
+  
+        .print-message {
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          background-color: #f1f1f1;
+          padding: 10px;
+          text-align: center;
+          font-weight: bold;
+        }
+      }
     </style>
 
 
@@ -18782,8 +18798,8 @@
             }
         }
         function printPage() {
-          window.print();
-        }
+      window.print();
+    }
     </script>
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
