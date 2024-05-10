@@ -1,120 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I Next Computer Education</title>
-    <link rel="stylesheet" href="design.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I Next Computer Education</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">I Next Computer Education</div>
-            <div class="menu-toggle" onclick="toggleMenu()">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <ul class="menu" id="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="notice.html">Notices</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="std_data.html">Student Data Records</a></li>
-                <li><a href="std_marksheet.html">Student Marksheet</a></li>
-                <li><a href="login.html">Admin Pannel</a></li>
-            </ul>
-        </nav>
-    </header>
+<button id="scrollBtn" onclick="scrollToTop()">&#8593;</button>
 
 
-    <section class="dp">
-        <div class="design">
-            <h2><a href="ssaikia.html">Design & Print</a></h2>
-            <p>Discover exciting content on our designing & printing website!</p>
-        </div>
-    </section>
-
-
-    <section class="hero">
-        <div class="herosec">
-            <div class="content">
-                <h1>i-NexT Computer Education</h1><p>AN ISO 9001:2015 REGISTERED<br>REGD. UNDER XXI of 1860 NO. SIVA/256/C/85<BR>REGD. UNDER MINISTRY OF YOUTH AFFAIRS NO. NYK/SIV/215545</p>
-                <p>iNext Education in Sivasagar, Assam, excels in computer science education, blending theory and practice. Our hands on, project based approach ensures practical experience aligned with industry needs.</p>
-            </div>
-            <div class="image">
-                <img src="hero.jpg" alt="Image">
-            </div>
-        </div>
-    </section>
-
-
-    <div class="container">
-        <div class="notices">
-            <h2>Notices</h2>
-            <div class="notice">
-                <a href="1.pdf">
-                <div class="notice-info">
-                    <p>&#8605; This is a new notice. Please read it carefully.</p>
-                </div>
-            </a>
-            &nbsp; &nbsp; <span class="new-notice">New</span>
-            </div>
-            <div class="notice">
-                <a href="1.pdf">
-                <div class="notice-info">
-                    <p>&#8605; This is an old notice.</p>
-                </div>
-            </a>
-            </div>
-        </div>
-        <div class="profile">
-            <div class="profile-card">
-                <div class="profile-info">
-                    <p><strong>MEET FOUNDER</strong></p>
-                    <h2>Sonjib Saikia</h2>
-                    <h4>It is my pleasure to announce that our new website inextcomputereducation.in has been launched for the public in general and students in particular enabling to get all the information relating to their Examinations & verification and also to download the required documents.</h4>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="location-section">
-        <div class="location-container">
-          <h2 class="location-heading">LOCATION</h2>
-          <div class="location-info">
-            <div class="location-map">
-              <div class="iframe">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1777.6934892292352!2d94.63043599999996!3d26.9863058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x374731e0cb23126f%3A0x97ceb20011bd072b!2siNexT%20Computer%20Education!5e0!3m2!1sen!2sin!4v1711788713616!5m2!1sen!2sin" 
-              width="600" 
-              height="300" 
-              style="border:0;" 
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-            </div>
-            </div>
-            <div class="location-details">
-              <h3>Address</h3>
-              <p>Vision Market, Babu Patty,<br>Near Ronghar Hotel, Sivasagar-785640 (Assam)</p>
-              <h3>Contact</h3>
-              <p>Phone: +91 7896104781</p>
-            </div>
-          </div>
+<header>
+  <div class="head-container">
+    <div class="header-grid">
+      <div class="logo"><img src="logo.png" alt="School Logo"></div>
+      <div class="header-content">
+        <div class="school-info">
+          <h1 class="school-name">I Next Computer Education</h1>
+          <p class="slogan">Vison Market, Babupatty, Sivasagar</p>
         </div>
       </div>
+    </div>
+  </div>
+</header>
+
+<br><br><br>
+
+
+<nav class="navbar">
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="notice.html">Notices</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="std_data.html">Student Data Records</a></li>
+    <li><a href="std_marksheet.html">Student Marksheet</a></li>
+    <li><a href="login.html">Admin Pannel</a></li>
+  </ul>
+</nav>
+
+
+<section class="menu">
+  <div class="menu-content">
+  <button id="openDialogBtn"><i class="fas fa-bars fa-1x"></i>&nbsp;&nbsp;MENU</button>
+</div>
+</section>
+
+
+<div class="dialog-container" id="dialogContainer">
+  <div class="dialog-content">
+    <span class="close-icon" id="closeDialogBtn">&times;</span>
+    <ul class="other-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="notice.html">Notices</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="std_data.html">Student Data Records</a></li>
+      <li><a href="std_marksheet.html">Student Marksheet</a></li>
+      <li><a href="login.html">Admin Pannel</a></li>
+    </ul>
+  </div>
+</div>
 
 
 
-    <footer class="footer">
-        <div class="watermark">i Next Computer Education, Sivasagar</div>
-    </footer>
 
 
-    <script src="script.js"></script>
+<div class="grid-container">
+  <div class="intro">
+    <h1>I Next Computer Education</h1>
+    <p>I Next Education in Sivasagar, Assam, excels in computer science education, blending theory and practice. Our hands on, project based approach ensures practical experience aligned with industry needs.</p>
+  </div>
+  <div class="advertisement">
+    <h2>Check Out Our Designing & Printing Website</h2>
+    <p>Visit our Designing & Printing website for more amazing content!</p>
+    <a href="design-print.html" class="btn">DESIGN & PRINT</a>
+  </div>
+</div>
 
+
+
+<div class="grid-container">
+<div class="profile">
+  <div class="profile-card">
+    <div class="profile-info">
+      <img src="pfp.jpg" alt="Founder Image" class="profile-img">
+      <p><strong>MEET FOUNDER</strong></p>
+      <h2>Sonjib Saikia</h2>
+      <p>It is my pleasure to announce that our new website inextcomputereducation.in has been launched for the public in general and students in particular enabling to get all the information relating to their Examinations & verification and also to download the required documents.</p>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="notices">
+  <h2>Notices</h2>
+  <div class="notice">
+      <a href="1.pdf">
+      <div class="notice-info">
+          <p>&#8605; This is a new notice. Please read it carefully.</p>
+      </div>
+  </a>
+  &nbsp; &nbsp; <span class="new-notice">New</span>
+  </div>
+  <div class="notice">
+      <a href="1.pdf">
+      <div class="notice-info">
+          <p>&#8605; This is an old notice.</p>
+      </div>
+  </a>
+  </div>
+</div>
+
+
+</div>
+
+
+
+
+<div class="location-section">
+  <div class="location-container">
+    <h2 class="location-heading">LOCATION</h2>
+    <div class="location-info">
+      <div class="location-map">
+        <div class="iframe">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1777.6934892292352!2d94.63043599999996!3d26.9863058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x374731e0cb23126f%3A0x97ceb20011bd072b!2siNexT%20Computer%20Education!5e0!3m2!1sen!2sin!4v1711788713616!5m2!1sen!2sin" 
+        width="400" 
+        height="300" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      </div>
+      </div>
+      <div class="location-details">
+        <h3>Address</h3>
+        <p>Vision Market, Babu Patty,<br>Near Ronghar Hotel, Sivasagar-785640 (Assam)</p>
+        <h3>Contact</h3>
+        <p>Phone: +91 7896104781</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<br>
+
+<footer class="footer">
+  <p>&copy; 2024 I Next Computer Education</p>
+</footer>
+
+
+   
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,33 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INCE-Admin Pannel</title>
-    <link rel="stylesheet" href="design.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INCE-Admin Panel</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">I Next Computer Education</div>
-            <div class="menu-toggle" onclick="toggleMenu()">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <ul class="menu" id="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="std_data.html">Student Data Records</a></li><br>
-                <li><a href="#">Student Marksheet</a></li>
-                <li><a href="notice.html">Notices</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="index.html">Log Out!</a></li>
-            </ul>
-        </nav>
-    </header>
+<button id="scrollBtn" onclick="scrollToTop()">&#8593;</button>
 
-    <h2>Admin Pannel</h2>
+
+<header>
+  <div class="head-container">
+    <div class="header-grid">
+      <div class="logo"><img src="logo.png" alt="School Logo"></div>
+      <div class="header-content">
+        <div class="school-info">
+          <h1 class="school-name">I Next Computer Education</h1>
+          <p class="slogan">Vison Market, Babupatty, Sivasagar</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<br><br><br>
+
+
+<nav class="navbar">
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="notice.html">Notices</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="std_data.html">Student Data Records</a></li>
+    <li><a href="std_marksheet.html">Student Marksheet</a></li>
+    <li><a href="index.html">Log Out!</a></li>
+  </ul>
+</nav>
+
+
+<section class="menu">
+  <div class="menu-content">
+  <button id="openDialogBtn"><i class="fas fa-bars fa-1x"></i>&nbsp;&nbsp;MENU</button>
+</div>
+</section>
+
+
+<div class="dialog-container" id="dialogContainer">
+  <div class="dialog-content">
+    <span class="close-icon" id="closeDialogBtn">&times;</span>
+    <ul class="other-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="notice.html">Notices</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="std_data.html">Student Data Records</a></li>
+      <li><a href="std_marksheet.html">Student Marksheet</a></li>
+      <li><a href="index.html">Log Out!</a></li>
+    </ul>
+  </div>
+</div>
+
+
     <div class="container">
         <div class="box">
             <h3>Add Student's Marksheet Data</h3>
