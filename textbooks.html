@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TextBooks-SSMS</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  
+  <button id="scrollBtn" onclick="scrollToTop()">&#8593;</button>
+
+
+  <header>
+    <div class="head-container">
+      <div class="header-grid">
+        <div class="logo"><img src="logo.png" alt="School Logo"></div>
+        <div class="header-content">
+          <div class="school-info">
+            <h1 class="school-name">Sri Sundarmal Modern School</h1>
+            <p class="slogan">A.T.Road, Sivasagar-785640</p>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </header>
+  <br><br><br>
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="index.html"> <i class="fas fa-home icon-home"></i> Home</a></li>
+      <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+      <li><a href="notices.html"><i class="fas fa-bullhorn"></i> Notices</a></li>
+      <li><a href="faculty.html"><i class="fas fa-chalkboard-teacher"></i> Faculty</a></li>
+      <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Admin Panel</a></li>
+    </ul>
+  </nav>
+  <section class="menu">
+    <div class="menu-content">
+    <button id="openDialogBtn"><i class="fas fa-bars fa-1x"></i>&nbsp;&nbsp;MENU</button>
+  </div>
+  </section>
+  <div class="dialog-container" id="dialogContainer">
+    <div class="dialog-content">
+      <span class="close-icon" id="closeDialogBtn">&times;</span>
+      <ul class="other-links">
+        <li><a href="index.html"> <i class="fas fa-home icon-home"></i> HOME</a></li>
+        <li><a href="about.html"><i class="fas fa-info-circle"></i> ABOUT</a></li>
+        <li><a href="notices.html"><i class="fas fa-bullhorn"></i> NOTICES</a></li>
+        <li><a href="faculty.html"><i class="fas fa-chalkboard-teacher"></i> FACULTY</a></li>
+        <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> ADMIN PANEL</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+
+<div class="textbook-container">
+    <h1>Select Class & Subject to Download Books</h1>
+    <select id="classSelect">
+      <option value="">Select Class &#8628;</option>
+      <option value="class5">Class V</option>
+      <option value="class6">Class VI</option>
+      <option value="class7">Class VII</option>
+      <option value="class8">Class VIII</option>
+      <option value="class9">Class IX</option>
+      <option value="class10">Class X</option>
+      <!-- Add options for other classes -->
+    </select>
+    <select id="subjectSelect">
+      <option value="">Select Subject &#8628;</option>
+      <!-- Options for subjects will be added dynamically based on class selection -->
+    </select>
+    <div class="download-button">
+        <button id="downloadBtn">Download PDF</button>
+      </div>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br>
+
+  
+<footer class="footer">
+  <p>&copy;<strong> Sri Sundarmal Modern School</strong></p>
+</footer>
+  
+
+<script>
+  
+/* TextBooks Data Structure With Path & Algorithms for selection */
+const subjectsData = {
+  class5: {
+    math: 'path/to/class1_math.pdf',
+    science: 'path/to/class1_science.pdf',
+    english: 'path/to/class1_english.pdf',
+    hindi: 'path/to/class1_history.pdf',
+    assamese: 'path/to/class1_history.pdf',
+    socialㅤScience: 'path/to/class1_history.pdf',
+    computer: 'path/to/class1_history.pdf',
+  },
+
+  class6: {
+    math: 'path/to/class2_math.pdf',
+    science: 'path/to/class2_science.pdf',
+    english: 'path/to/class2_english.pdf',
+    hindi: 'path/to/class1_history.pdf',
+    assamese: 'path/to/class1_history.pdf',
+    socialㅤScience: 'path/to/class1_history.pdf',
+    computer: 'path/to/class1_history.pdf',
+  },
+
+  class7: {
+    math: 'path/to/class3_math.pdf',
+    science: 'path/to/class3_science.pdf',
+    english: 'path/to/class3_english.pdf',
+    hindi: 'path/to/class1_history.pdf',
+    assamese: 'path/to/class1_history.pdf',
+    socialㅤScience: 'path/to/class1_history.pdf',
+    computer: 'path/to/class1_history.pdf',
+  },
+
+  class8: {
+    math: 'path/to/class3_math.pdf',
+    science: 'path/to/class3_science.pdf',
+    english: 'path/to/class3_english.pdf',
+    hindi: 'path/to/class1_history.pdf',
+    assamese: 'path/to/class1_history.pdf',
+    socialㅤScience: 'path/to/class1_history.pdf',
+    computer: 'path/to/class1_history.pdf',
+  },
+
+  class9: {
+    math: 'path/to/class3_math.pdf',
+    science: 'path/to/class3_science.pdf',
+    english: 'path/to/class3_english.pdf',
+    hindi: 'path/to/class1_history.pdf',
+    assamese: 'path/to/class1_history.pdf',
+    socialㅤScience: 'path/to/class1_history.pdf',
+    computer: 'path/to/class1_history.pdf',
+    advancedㅤMathematics: 'path/to/class1_history.pdf',
+  }
+,
+  class10: {
+    math: 'path/to/class3_math.pdf',
+    science: 'path/to/class3_science.pdf',
+    english: 'path/to/class3_english.pdf',
+    hindi: 'path/to/class1_history.pdf',
+    assamese: 'path/to/class1_history.pdf',
+    socialㅤScience: 'path/to/class1_history.pdf',
+    advancedㅤMathematics: 'path/to/class1_history.pdf',
+  },
+};
+
+
+function populateSubjects(classValue) {
+  const subjectSelect = document.getElementById('subjectSelect');
+  subjectSelect.innerHTML = '<option value="">Select Subject&#8628;</option>';
+
+  if (classValue && subjectsData.hasOwnProperty(classValue)) {
+    const subjects = Object.keys(subjectsData[classValue]);
+    subjects.forEach(subject => {
+      const option = document.createElement('option');
+      option.value = subject;
+      option.text = subject.charAt(0).toUpperCase() + subject.slice(1); 
+      subjectSelect.appendChild(option);
+    });
+  }
+}
+
+document.getElementById('classSelect').addEventListener('change', function() {
+  const classValue = this.value;
+  populateSubjects(classValue);
+});
+
+document.getElementById('downloadBtn').addEventListener('click', function() {
+  const classValue = document.getElementById('classSelect').value;
+  const subjectValue = document.getElementById('subjectSelect').value;
+  
+  if (classValue && subjectValue && subjectsData[classValue]?.[subjectValue]) {
+    window.location.href = subjectsData[classValue][subjectValue];
+  } else {
+    alert('Please select a valid class and subject!');
+  }
+});
+</script>
+     
+  <script src="script.js"></script>
+
+  </body>
+  </html>
