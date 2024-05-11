@@ -421,15 +421,9 @@ iframe {
   background-color: #571503; 
 }
 
-
-
-.image {
+.center {
   max-width: 100%;
-  display: flex; 
-  justify-content: center; 
   align-items: center;
-  height: auto;
-  border-radius: inherit; 
 }
 
 table {
@@ -441,7 +435,7 @@ table {
 
 td,
 th {
-  border: 1px solid #000000;
+  border: 1px solid #ccc;
   text-align: left;
   padding: 8px;
   font-size: 14px;
@@ -564,6 +558,10 @@ input[type="password"] {
   
   
   @media (max-width: 768px) {
+
+    iframe {
+      width: 150px;
+    }
 
     .grid-container{
       display: block;
