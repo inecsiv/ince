@@ -284,19 +284,17 @@ p {
 }
 
 .profile {
-  padding: 20px;
   margin-top: 0;
   margin-bottom: 0;
   flex: 1;
-  padding: 20px;
 }
 
 .profile-img {
   animation: fadeIn 1s ease-in-out forwards;
-  margin-left: 35%;
+  margin-left: 40%;
   margin-right: 50%;
-  max-width: 200px;
-  height: 200px;
+  max-width: 150px;
+  height: 150px;
 }
 
 .profile-card {
@@ -448,14 +446,14 @@ th {
 }
 
 .search-print-container label {
-  font-family: Poppins, sans-serif;
+  font-family: 'Poppins', sans-serif;
   display: block;
   margin-bottom: 5px;
 }
 
 .search-print-container input[type="text"] {
   padding: 8px;
-  font-family: Poppins, sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin-bottom: 10px;
   border: 1px solid #ff4917;
   border-radius: 5px;
@@ -463,11 +461,12 @@ th {
 }
 
 .search-print-container .btn {
-  padding: 10px 20px;
+  font-family: 'Poppins', sans-serif;
+  padding: 8px 15px;
+  font-size: 16px;
   background-color: #ff4917;
   color: #fff;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
   margin-right: 10px;
 }
