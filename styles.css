@@ -561,9 +561,9 @@ input[type="password"] {
     .profile-img {
       animation: fadeIn 1s ease-in-out forwards;
       margin-left: 25%;
-      margin-right: 50%;
-      max-width: 200px;
-      height: 200px;
+      margin-right: 25%;
+      max-width: 150px;
+      height: 150px;
     }
 
     .grid-container{
