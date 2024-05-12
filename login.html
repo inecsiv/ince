@@ -68,8 +68,13 @@
 </div>
 
 
+<br><br><br>
+
+
+
     <div class="login-container">
-        <h2>Login</h2>
+      <img src="logo.png" alt="Founder Image" class="logo-img">
+        <h2>LOGIN</h2>
         <form id="admin-login-form">
             <div class="form-group">
                 <label for="admin-id">Admin ID:</label>
@@ -80,11 +85,11 @@
                 <input type="password" id="admin-password" name="admin-password" required>
             </div>
             <div id="login-error" class="error-message"></div>
-            <button type="submit" class="btn">Login</button>
+            <button type="submit" class="attach-btn">Login</button>
         </form>
     </div>
 
-    <br><BR><br>
+    <br><br><br>
 
       <footer class="footer">
         <p>&copy; 2024 I Next Computer Education</p>
@@ -102,7 +107,7 @@
     if (adminId === "ssaikia" && adminPassword === "saikia7896") {
       window.location.href = "admin-pannel.html"; 
     } else {
-      document.getElementById("login-error").textContent = "Invalid admin ID or password.";
+      document.getElementById("login-error").textContent = "Invalid Admin ID or Password.";
     }
 });
 

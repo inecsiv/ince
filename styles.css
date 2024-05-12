@@ -148,8 +148,13 @@ header {
 .other-links a:hover {
   color: #ff4917;
 }
+
+h2{
+  text-align: center;
+}
   
 .navbar {
+  animation: fadeIn 1s ease-in-out forwards;
   background-color: #ff4917;
   color: #fff;
 }
@@ -233,6 +238,16 @@ p {
   text-align: justify;
 }
 
+.logo-img {
+  animation: fadeIn 1s ease-in-out forwards;
+  margin-left: 35%;
+  margin-right: 50%;
+  max-width: 100px;
+  height: 100px;  
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .grid-container {
   margin-bottom: 0;
   display: grid;
@@ -248,14 +263,24 @@ p {
   padding: 20px;
   margin-top: 0;
   margin-bottom: 0;
+  animation: fadeIn 1s ease-in-out forwards;
 }
-  
+
+.intro h2 {
+  text-align: left;
+}
+
 .advertisement {
   box-shadow: 0 20px 30px rgba(0,0,0,.05);
   background-color: #ffffff;
   border-bottom: #ff4917 5px solid;
   padding: 20px;
   margin-bottom: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.advertisement h2 {
+  text-align: left;
 }
 
 .profile {
@@ -267,6 +292,9 @@ p {
 }
 
 .profile-img {
+  animation: fadeIn 1s ease-in-out forwards;
+  margin-left: 35%;
+  margin-right: 50%;
   max-width: 200px;
   height: 200px;
 }
@@ -298,6 +326,7 @@ p {
 }
 
 .course-card {
+  animation: fadeIn 1s ease-in-out forwards;
   font-family: 'Poppins';
   background-color: #ffffff;
   margin: 20px;
@@ -366,45 +395,7 @@ p {
   color: #fff;
 }
 
-.location-section {
-  margin-top: 0;
-  background-color: #ffffff;
-  padding: 20px;
-}
-
-.location-container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.location-heading {
-  color: #000000;
-  text-align: center;
-  font-size: 25px;
-  margin-bottom: 20px;
-}
-
-.location-info {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.location-map img {
-  max-width: 100%;
-  height: auto;
-}
-
-.location-details {
-  flex: 1;
-}
-
-iframe {
-  border-radius: 5px;
-}
-
-.btn {
+.attach-btn {
   background-color: #ff4917; 
   border: none;
   color: white;
@@ -417,8 +408,8 @@ iframe {
   cursor: pointer;
 }
 
-.btn:hover {
-  background-color: #571503; 
+.attach-btn:hover {
+  background-color: #ffbba9; 
 }
 
 .center {
@@ -446,7 +437,6 @@ th {
   text-align: center;
   font-weight: bold;
 }
-
 
 .search-print-container {
   text-align: center;
@@ -487,12 +477,15 @@ th {
 }
 
 .login-container {
+  animation: fadeIn 1s ease-in-out forwards;
   width: 300px;
   margin: 100px auto;
   background-color: #fff;
   border-radius: 5px;
   padding: 20px;
-  box-shadow: 0 20px 30px rgba(0,0,0,.05)
+  box-shadow: 0 20px 30px rgba(0,0,0,.05);
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .form-group {
@@ -523,6 +516,7 @@ input[type="password"] {
 }
 
 .container {
+  margin: 20px;
   display: flex;
 }
 
@@ -558,9 +552,19 @@ input[type="password"] {
   
   
   @media (max-width: 768px) {
+    .container{
+      display: block;
+    }
+    .box{
+      display: block;
+    }
 
-    iframe {
-      width: 150px;
+    .profile-img {
+      animation: fadeIn 1s ease-in-out forwards;
+      margin-left: 25%;
+      margin-right: 50%;
+      max-width: 200px;
+      height: 200px;
     }
 
     .grid-container{
