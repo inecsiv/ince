@@ -1,241 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <link rel="icon" href="https://lh3.googleusercontent.com/drive-viewer/AEYmBYQUBqqhKtVlj-3aJh2LVrWLkhRxqQMXJNl-Jxbb0M4aFIip-JgyppzhkFnOP7JJABIKbL_sIqDlV93___l_FoshgZPW=s1600" type="image/x-icon">
-<link rel="shortcut icon" href=https://lh3.googleusercontent.com/drive-viewer/AEYmBYQUBqqhKtVlj-3aJh2LVrWLkhRxqQMXJNl-Jxbb0M4aFIip-JgyppzhkFnOP7JJABIKbL_sIqDlV93___l_FoshgZPW=s1600" type="image/x-icon">
-
-    
-    <style>
-      .rounded-button {
-            padding: 10px 20px;
-            border-radius: 8px;
-            background-color: #ff4917;
-            color: white;
-            border: none;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 14px;
-            margin: 4px 2px;
-            cursor: pointer;
-        }
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f6fcff;
-            color: #000000;
-            transition: background-color 0.5s;
-        }
-
-        header {
-  background-color: #ffffff;
-  color: #000000;
-  box-shadow: 0 20px 30px rgba(0,0,0,.05);
-  padding: 3px;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  text-align: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-}
-  
-.header-grid {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  display: grid;
-  grid-template-columns: auto 1fr auto; 
-  align-items: center;
-  justify-content: space-between;
-}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='design.css' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+<link rel="icon" href="dplogo.png" type="image/x-icon">
+<link rel="shortcut icon" href="dplogo.png" type="image/x-icon">
+<title>Design & Print, Sivasagar</title>
 
 
-        section {
-            margin: 2em;
-            padding: 2em;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
-
-        section:hover {
-            transform: scale(1.02);
-            box-shadow: 0 6px 12px #efefef;
-        }
-
-        footer {
-            background-color: #00000000;
-            color: #000000;
-            text-align: center;
-            padding: 1em;
-            font-size: 0.9em;
-        }
-
-        footer:hover {
-            background-color: #7097ea00 ;
-        }
-
-        h2 {
-            color: #000000 ;
-            padding-bottom: 0.5em;
-            margin-bottom: 1em;
-            transition: color 0.3s;
-        }
-
-        h3 {
-            color: #ffffff;
-            text-align: center;
-            font-size: 1em;
-        }
-
-        h2:hover {
-            color: #000000;
-            border-bottom: 2px solid #e7e7e7;
-        }
-
-        #images {
-            overflow: hidden;
-        }
-
-        .image-container {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .image-container img {
-            width: 50%;
-            height: 40%;
-            border-radius: 8px;
-        }
-
-        .head-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-  
-.header-content {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
-}
-  
-.logo img {
-  margin: 10px;
-  margin-bottom: 0;
-  margin-top: 0;
-  width: 80px;
-  height: 80px;
-  animation: fadeIn 1s ease-in-out forwards;
-}
-  
-.school-info {
-  animation: fadeIn 1s ease-in-out forwards;
-  text-align: left;
-}
-  
-.school-name {
-  margin: 0;
-  animation: fadeIn 1s ease-in-out forwards;
-  margin-top: 15px;
-  font-size: 24px; 
-}
-  
-.slogan {
-  margin-top: 5px;
-  font-size: 16px;
-}
-
-
-.navbar {
-  animation: fadeIn 1s ease-in-out forwards;
-  background-color: #ff4917;
-  color: #fff;
-}
-  
-.nav-links {
-  display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 10px 20px; 
-}
-  
-.nav-links li {
-  margin-right: 20px; 
-}
-  
-.nav-links li:last-child {
-  margin-right: 0;
-}
-  
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 16px;
-}
-
-        @media only screen and (max-width: 400px) {
-            body {
-                font-size: 14px;
-            }
-
-            header {
-                font-size: 0.8em;
-            }
-
-            h3 {
-                font-size: 0.8em;
-            }
-
-            section {
-                margin: 1em;
-                padding: 1em;
-            }
-
-            .image-container img {
-                border-radius: 4px;
-            }
-        }
-
-    </style>
- <script>
-    let currentIndex = 0;
-
-    function showImage(index) {
-        const imageContainer = document.querySelector('.image-container');
-        currentIndex = index;
-        const transformValue = -index * 100 + '%';
-        imageContainer.style.transform = 'translateX(' + transformValue + ')';
-    }
-
-    function nextImage() {
-        currentIndex = (currentIndex + 1) % imageCount;
-        showImage(currentIndex);
-    }
-
-    function prevImage() {
-        currentIndex = (currentIndex - 1 + imageCount) % imageCount;
-        showImage(currentIndex);
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-        showImage(currentIndex);
-    });
-</script>
-    </script>
-    <title>Design & Print, Sivasagar</title>
 </head>
-
 <body>
     <header>
         <div class="head-container">
@@ -251,15 +26,13 @@
         </div>
       </header>
 
-      <br><br>
+      <br><br><br><br>
+
+
       <nav class="navbar">
         <ul class="nav-links">
-          <li><a href="index.html"><i class="fas fa-home icon-home"></i> Home</a></li>
-          <li><a href="notice.html"><i class="fas fa-bullhorn"></i> Notices</a></li>
-          <li><a href="courses.html"><i class="fas fa-book"></i> Courses</a></li>
-          <li><a href="std_data.html"><i class="fas fa-user-graduate"></i> Student Data Records</a></li>
-          <li><a href="std_marksheet.html"><i class="fas fa-user-graduate"></i> Student Marksheet</a></li>
-          <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Admin Pannel</a></li>
+          <li><a href="index.html"><i class="fas fa-home icon-home"></i> Home (INCE)</a></li>
+          <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Admin Pannel (INCE)</a></li>
         </ul>
       </nav>
 
@@ -291,11 +64,11 @@
       
 
     <section id="prices">
-        <h2>Price Tags (Human Portraits)</h2>
-        <p>Single Person Portrait (A4 Size): ₹300 INR</p><a href="https://wa.link/4t4pic" class="rounded-button">Click to Order</a>
-        <p>Couple Portrait (A4 Size): ₹500 INR</p><a href="https://wa.link/4t4pic" class="rounded-button">Click to Order</a>
-        <p>Full Family Portrait: ₹700 INR</p><a href="https://wa.link/4t4pic" class="rounded-button">Click to Order</a>
-        <p>Portrait (Above 5 Persons): ₹1000 INR</p><a href="https://wa.link/4t4pic" class="rounded-button">Click to Order</a>
+        <h2>Services Available</h2>
+        <p>*Momentos &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;*T-Shirt</p>
+        <p>*Certficate &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;*ID-Cards</p>
+        <p>*Trophy & Medal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Contanct Cards</p>
+        <p>*Poster Printing &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Marriage Cards</p>
     </section>
 
 
@@ -309,5 +82,33 @@
     <footer>
         <p>Thanks for visiting!<br>Design & Print (INCE), Sivasagar</p>
     </footer>
+
+
+    <script>
+      let currentIndex = 0;
+  
+      function showImage(index) {
+          const imageContainer = document.querySelector('.image-container');
+          currentIndex = index;
+          const transformValue = -index * 100 + '%';
+          imageContainer.style.transform = 'translateX(' + transformValue + ')';
+      }
+  
+      function nextImage() {
+          currentIndex = (currentIndex + 1) % imageCount;
+          showImage(currentIndex);
+      }
+  
+      function prevImage() {
+          currentIndex = (currentIndex - 1 + imageCount) % imageCount;
+          showImage(currentIndex);
+      }
+  
+      document.addEventListener('DOMContentLoaded', function () {
+          showImage(currentIndex);
+      });
+  </script>
+
+
 </body>
 </html>
