@@ -205,19 +205,16 @@ td {
     </tr>
     <tr>
       <td>TOTAL MARKS</td>
-      <td id="totalMarks"></td>
+      <td id="totalMarksDCA">126</td>
       <td>200</td>
     </tr>
     <tr>
       <td>PERCENTAGE</td>
-      <td id="percentage"></td>
+      <td id="percentageDCA">63%</td>
       <td>100%</td>
     </tr>
   </tbody>
 </table>
-
-
-
 
 <table id="INCE/SIV/DOM/791/16">
   <thead>
@@ -240,7 +237,7 @@ td {
     </tr>
     <tr>
       <td>FATHER'S NAME:</td>
-      <td colspan="2">Jitu Hazarika </td>
+      <td colspan="2">Jitu Hazarika</td>
     </tr>
     <tr>
       <td>COURSE NAME:</td>
@@ -275,16 +272,17 @@ td {
     </tr>
     <tr>
       <td>TOTAL MARKS</td>
-      <td id="totalMarks"></td>
+      <td id="totalMarksDOM">120</td>
       <td>200</td>
     </tr>
     <tr>
       <td>PERCENTAGE</td>
-      <td id="percentage"></td>
+      <td id="percentageDOM">60%</td>
       <td>100%</td>
     </tr>
   </tbody>
 </table>
+
 
 
 
@@ -309,20 +307,8 @@ function showTable() {
         table.style.display = 'table'; // Show the table
         calculateTotalAndPercentage(); // Calculate and display total marks and percentage
     } else {
-        alert('Entered ID: ' + tableId + ' Not Found!');
+        alert('Entered ID:: ' + tableId + ' Not Found!');
     }
-}
-
-function calculateTotalAndPercentage() {
-    var subjectMarks = document.getElementsByClassName('subject-mark');
-    var totalMarks = 0;
-    for (var i = 0; i < subjectMarks.length; i++) {
-        totalMarks += parseFloat(subjectMarks[i].textContent);
-    }
-    var percentage = (totalMarks / 200) * 100;
-
-    document.getElementById('totalMarks').textContent = totalMarks;
-    document.getElementById('percentage').textContent = isNaN(percentage) ? '0.00%' : percentage.toFixed(2) + '%';
 }
 
 function printPage() {
